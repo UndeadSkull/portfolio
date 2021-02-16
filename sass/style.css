@@ -54,8 +54,13 @@ body {
 }
 
 .view3, .view2, .view1 {
-  height: 100vh;
+  height: 84vh;
   position: relative;
+  padding: 5vw;
+}
+.view3 .view-heading, .view2 .view-heading, .view1 .view-heading {
+  font-size: 80px;
+  font-weight: 800;
 }
 
 .view1 {
@@ -71,7 +76,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: all ease 0.1s;
+  transition: all linear 0.1s;
 }
 .view1 #bb:hover {
   transform: translate(-50%, -50%) translate(-5px, -5px);
@@ -80,11 +85,6 @@ body {
 
 .view2 {
   background-color: #F59D9A;
-  padding: 5vw;
-}
-.view2 .view-heading {
-  font-size: 80px;
-  font-weight: 800;
 }
 .view2 .work-container {
   display: flex;
@@ -114,6 +114,56 @@ body {
   background-color: #F55149;
   width: 200px;
   height: 30px;
+}
+
+.view3 {
+  background-color: #aaa;
+}
+.view3 .form-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view3 .form-container form {
+  background-color: #fff;
+  padding: 5px 2vw 15px 2vw;
+  border: 2px solid black;
+  box-shadow: -5px -5px 0 #777;
+  transition: all 0.1s linear;
+  text-align: right;
+}
+.view3 .form-container form:hover {
+  box-shadow: 0px 0px 0 #777;
+  transform: translate(-5px, -5px);
+}
+.view3 .form-container form p {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+}
+.view3 .form-container form hr.divider {
+  border: 0;
+  border-top: 2px solid black;
+  margin: 5px -2vw 15px -2vw;
+}
+.view3 .form-container form .text, .view3 .form-container form textarea {
+  margin: 10px 0px;
+  padding: 10px 8px;
+  border: 2px solid #555;
+  background-color: #ccc;
+  display: block;
+  width: 300px;
+  font-size: 18px;
+}
+.view3 .form-container form .text::placeholder, .view3 .form-container form textarea::placeholder {
+  font-size: 16px;
+}
+.view3 .form-container form #send {
+  background-color: #ccc;
+  padding: 5px;
+  font-size: 15px;
+  border: 2px solid black;
 }
 
 /*# sourceMappingURL=style.css.map */

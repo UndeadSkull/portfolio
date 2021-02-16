@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sass/style.css">
+    <script src="/js/script.js"></script>
     <title>B.B</title>
 </head>
 
@@ -23,36 +24,28 @@
         <span class="view-heading">Our Works</span>
         <div class="work-container">
             <div class="work">
-                <img src="/images/tenorhut.jpg" alt="" srcset="">
+                <img src="./images/tenorhut.jpg" alt="" srcset="">
                 <p><span>Tenor Hut</span></p>    
             </div>
             <div class="work">
-                <img src="/images/tenorhut.jpg" alt="" srcset="">
+                <img src="./images/skiteup.jpg" alt="" srcset="">
                 <p><span>Skite Up</span></p>    
             </div>
         </div>
     </section>
     <section class="view3" id="view3">
-        <span>Contact Us</span>
+        <span class="view-heading">Contact Us</span>
+        <div class="form-container">
+            <form action="">
+                <p>CONTACT FORM</p>
+                <hr class="divider">
+                <input class="text" type="text" name="name" id="name" placeholder="Name">
+                <input class="text" type="email" name="email" id="email" placeholder="Email">
+                <textarea class="text" type="text" name="message" id="messsage" placeholder="Message"></textarea>
+                <input type="button" value="SEND" id="send">
+            </form>
+        </div>
     </section>
-    <script>
-        window.onscroll = function (e) {
-            var vertical_position = 0;
-            if (pageYOffset)//usual
-            vertical_position = pageYOffset;
-            else if (document.documentElement.clientHeight)//ie
-            vertical_position = document.documentElement.scrollTop;
-            else if (document.body)//ie quirks
-            vertical_position = document.body.scrollTop;
-            
-            var your_div = document.getElementById('scroll');
-            if(vertical_position < 400) your_div.style.setProperty("top", "19%");
-            else if(vertical_position <1200) your_div.style.setProperty("top", "50%");
-            else your_div.style.setProperty("top", "81%");
-            
-
-        }
-    </script>
 </body>
 
 </html>
