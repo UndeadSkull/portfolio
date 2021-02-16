@@ -1,0 +1,53 @@
+%view
+    height: 100vh
+    position: relative
+.view1
+    @extend %view
+    background-color: $primary
+    #bb
+        position: absolute
+        font-size: 150px
+        color: $accent      
+        background-color: $secondary
+        padding: 0px 35px
+        box-shadow: -5px -5px 0 $accent
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        transition: all ease 0.1s
+        &:hover
+            transform: translate(-50%,-50%) translate(-5px,-5px)
+            box-shadow: 0px 0px 0 $accent
+.view2
+    @extend %view
+    background-color: $secondary
+    padding: 5vw
+    .view-heading
+        font-size: 80px
+        font-weight: 800
+    .work-container
+        display: flex
+        padding: 2vw
+        .work
+            margin: 1vw
+            text-align: right
+            img
+                width: 300px
+            p
+                margin-top: -20px
+                font-size: 30px
+                font-weight: 600
+                span
+                    position: relative
+                    z-index: 1
+                &::after
+                    content: ""
+                    display: inline-block
+                    position: absolute
+                    // left: 100%
+                    transform: translateX(-95%)
+                    background-color: $accent
+                    width: 200px
+                    height: 30px
+.view3
+    @extend %view

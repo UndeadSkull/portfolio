@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Courier New", Courier, monospace;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  cursor: crosshair;
+}
+html ::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.sidebar {
+  position: fixed;
+  right: 1vw;
+  top: 50vh;
+  transform: translate(0%, -50%);
+  background-color: black;
+  z-index: 1;
+}
+.sidebar #scroll {
+  display: inline-block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #F55149;
+  top: 19%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 0.2s linear -50ms;
+}
+.sidebar a {
+  text-decoration: none;
+  color: #F55149;
+  display: block;
+  margin: 5px;
+  line-height: 0;
+}
+.sidebar a::before {
+  display: inline-block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 1px solid #F55149;
+}
+
+.view3, .view2, .view1 {
+  height: 100vh;
+  position: relative;
+}
+
+.view1 {
+  background-color: #D6EC9B;
+}
+.view1 #bb {
+  position: absolute;
+  font-size: 150px;
+  color: #F55149;
+  background-color: #F59D9A;
+  padding: 0px 35px;
+  box-shadow: -5px -5px 0 #F55149;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all ease 0.1s;
+}
+.view1 #bb:hover {
+  transform: translate(-50%, -50%) translate(-5px, -5px);
+  box-shadow: 0px 0px 0 #F55149;
+}
+
+.view2 {
+  background-color: #F59D9A;
+  padding: 5vw;
+}
+.view2 .view-heading {
+  font-size: 80px;
+  font-weight: 800;
+}
+.view2 .work-container {
+  display: flex;
+  padding: 2vw;
+}
+.view2 .work-container .work {
+  margin: 1vw;
+  text-align: right;
+}
+.view2 .work-container .work img {
+  width: 300px;
+}
+.view2 .work-container .work p {
+  margin-top: -20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.view2 .work-container .work p span {
+  position: relative;
+  z-index: 1;
+}
+.view2 .work-container .work p::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  transform: translateX(-95%);
+  background-color: #F55149;
+  width: 200px;
+  height: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

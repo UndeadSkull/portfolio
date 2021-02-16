@@ -1,0 +1,32 @@
+.sidebar
+    position: fixed
+    right: 1vw
+    top: 50vh
+    transform: translate(0%, -50%)
+    background-color: black
+    // border-radius: 16px
+    z-index: 1
+    #scroll
+        display: inline-block
+        position: absolute
+        width: 15px
+        height: 15px
+        background-color: $accent
+        // border-radius: 15px
+        top:19%
+        left: 50%
+        transform: translate(-50%, -50%)
+        transition: top 0.2s linear -50ms
+    a
+        text-decoration: none
+        color: $accent
+        display: block
+        margin: 5px
+        line-height: 0
+        &::before
+            display: inline-block
+            content: ""
+            width: 18px
+            height: 18px
+            border: 1px solid $accent
+            // border-radius: 50%
