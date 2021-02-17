@@ -8,7 +8,7 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
   scroll-behavior: smooth;
-  cursor: crosshair;
+  cursor: url(../images/cursor.png), auto;
 }
 html ::-webkit-scrollbar {
   display: none;
@@ -44,6 +44,7 @@ body {
   display: block;
   margin: 5px;
   line-height: 0;
+  cursor: inherit;
 }
 .sidebar a::before {
   display: inline-block;
@@ -59,6 +60,7 @@ body {
   padding: 5vw;
 }
 .view3 .view-heading, .view2 .view-heading, .view1 .view-heading {
+  display: block;
   font-size: 80px;
   font-weight: 800;
 }
@@ -72,15 +74,22 @@ body {
   color: #F55149;
   background-color: #F59D9A;
   padding: 0px 35px;
-  box-shadow: -5px -5px 0 #F55149;
+  box-shadow: -5px 5px 0 #F55149;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all linear 0.1s;
 }
 .view1 #bb:hover {
-  transform: translate(-50%, -50%) translate(-5px, -5px);
+  transform: translate(-50%, -50%) translate(-5px, 5px);
   box-shadow: 0px 0px 0 #F55149;
+}
+.view1 #bb #were {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: -30px;
+  font-variant-caps: unicase;
 }
 
 .view2 {
@@ -119,35 +128,41 @@ body {
 .view3 {
   background-color: #aaa;
 }
-.view3 .form-container {
-  height: 100%;
+.view3 .view-content {
+  margin: 5vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
-.view3 .form-container form {
+.view3 .view-content .info-container {
+  flex-direction: column;
+}
+.view3 .view-content .info-container p {
+  width: fit-content;
+}
+.view3 .view-content .form-container form {
   background-color: #fff;
   padding: 5px 2vw 15px 2vw;
   border: 2px solid black;
-  box-shadow: -5px -5px 0 #777;
+  box-shadow: -5px 5px 0 #777;
   transition: all 0.1s linear;
   text-align: right;
 }
-.view3 .form-container form:hover {
+.view3 .view-content .form-container form:hover {
   box-shadow: 0px 0px 0 #777;
-  transform: translate(-5px, -5px);
+  transform: translate(-5px, 5px);
 }
-.view3 .form-container form p {
+.view3 .view-content .form-container form p {
   text-align: center;
   font-size: 28px;
   font-weight: 600;
 }
-.view3 .form-container form hr.divider {
+.view3 .view-content .form-container form hr.divider {
   border: 0;
   border-top: 2px solid black;
   margin: 5px -2vw 15px -2vw;
 }
-.view3 .form-container form .text, .view3 .form-container form textarea {
+.view3 .view-content .form-container form .text, .view3 .view-content .form-container form textarea {
+  font-family: inherit;
   margin: 10px 0px;
   padding: 10px 8px;
   border: 2px solid #555;
@@ -156,10 +171,11 @@ body {
   width: 300px;
   font-size: 18px;
 }
-.view3 .form-container form .text::placeholder, .view3 .form-container form textarea::placeholder {
+.view3 .view-content .form-container form .text::placeholder, .view3 .view-content .form-container form textarea::placeholder {
   font-size: 16px;
 }
-.view3 .form-container form #send {
+.view3 .view-content .form-container form #send {
+  font-family: inherit;
   background-color: #ccc;
   padding: 5px;
   font-size: 15px;
