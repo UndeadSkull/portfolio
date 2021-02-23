@@ -42,6 +42,8 @@
                 position: absolute
                 transform: translate(-50%,-50%)
                 font-size: 40px
+                color: $primary
+                background: $accent
                 transition: all 0.5s ease 
         &:hover
             transform: translate(-50%,-50%) translate(-5px,5px)
@@ -50,6 +52,8 @@
                 width: 100%
                 margin-top: -150px
                 margin-bottom: 120px
+                color: $primary
+                background: $accent
             .names
                 opacity: 1
             #name1
@@ -73,9 +77,27 @@
 .view2
     @extend %view
     background-color: $secondary
-    .work-container
+    .tab-container
         display: flex
-        padding: 2%
+        justify-content: space-around
+        .tab-heading
+            border: none
+            outline: none
+            cursor: inherit
+            text-decoration: none
+            font-size: 28px
+            color: $secondary
+            background: $accent
+            &.active
+                color: #000
+    .work-container
+        margin: 4%
+        opacity: 1
+        display: flex
+        width: 90%
+        // height: 88%
+        position: absolute
+        transition: opacity 0.3s ease
         .work
             margin: 1%
             text-align: right

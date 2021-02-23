@@ -105,6 +105,8 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
   font-size: 40px;
+  color: #D6EC9B;
+  background: #F55149;
   transition: all 0.5s ease;
 }
 .view1 #bb:hover {
@@ -115,6 +117,8 @@ body {
   width: 100%;
   margin-top: -150px;
   margin-bottom: 120px;
+  color: #D6EC9B;
+  background: #F55149;
 }
 .view1 #bb:hover .names {
   opacity: 1;
@@ -147,9 +151,29 @@ body {
 .view2 {
   background-color: #F59D9A;
 }
-.view2 .work-container {
+.view2 .tab-container {
   display: flex;
-  padding: 2%;
+  justify-content: space-around;
+}
+.view2 .tab-container .tab-heading {
+  border: none;
+  outline: none;
+  cursor: inherit;
+  text-decoration: none;
+  font-size: 28px;
+  color: #F59D9A;
+  background: #F55149;
+}
+.view2 .tab-container .tab-heading.active {
+  color: #000;
+}
+.view2 .work-container {
+  margin: 4%;
+  opacity: 1;
+  display: flex;
+  width: 90%;
+  position: absolute;
+  transition: opacity 0.3s ease;
 }
 .view2 .work-container .work {
   margin: 1%;
