@@ -75,25 +75,25 @@ body {
 }
 .view1 #bb {
   position: absolute;
+  padding: 0px 35px;
   font-size: 150px;
   color: #F55149;
   background-color: #F59D9A;
-  padding: 0px 35px;
-  box-shadow: -5px 5px 0 #F55149;
   top: 50%;
   left: 50%;
+  box-shadow: -5px 5px 0 #F55149;
   transform: translate(-50%, -50%);
   transition: all linear 0.1s;
 }
 .view1 #bb #were {
+  margin-bottom: -30px;
+  width: 0;
+  text-align: center;
   font-size: 30px;
   font-weight: 600;
-  line-height: 30px;
-  margin-bottom: -30px;
-  transition: all 0.5s ease;
   font-variant-caps: unicase;
-  text-align: center;
-  width: 0;
+  line-height: 30px;
+  transition: all 0.5s ease;
 }
 .view1 #bb .container {
   position: absolute;
@@ -101,22 +101,22 @@ body {
   left: 50%;
 }
 .view1 #bb .container .names {
-  opacity: 0;
   position: absolute;
-  transform: translate(-50%, -50%);
+  opacity: 0;
   font-size: 40px;
   color: #D6EC9B;
   background: #F55149;
+  transform: translate(-50%, -50%);
   transition: all 0.5s ease;
 }
 .view1 #bb:hover {
-  transform: translate(-50%, -50%) translate(-5px, 5px);
   box-shadow: 0px 0px 0 #F55149;
+  transform: translate(-50%, -50%) translate(-5px, 5px);
 }
 .view1 #bb:hover #were {
-  width: 100%;
   margin-top: -150px;
   margin-bottom: 120px;
+  width: 100%;
   color: #D6EC9B;
   background: #F55149;
 }
@@ -156,30 +156,32 @@ body {
   justify-content: space-around;
 }
 .view2 .tab-container .tab-heading {
+  color: #F59D9A;
+  background: #F55149;
+  font: inherit;
+  font-size: 28px;
+  font-weight: 600;
+  text-decoration: none;
   border: none;
   outline: none;
   cursor: inherit;
-  text-decoration: none;
-  font-size: 28px;
-  color: #F59D9A;
-  background: #F55149;
 }
 .view2 .tab-container .tab-heading.active {
   color: #000;
 }
 .view2 .work-container {
+  display: flex;
+  position: absolute;
   margin: 4%;
   opacity: 1;
-  display: flex;
   width: 90%;
-  position: absolute;
   transition: opacity 0.3s ease;
 }
 .view2 .work-container .work {
   margin: 1%;
+  color: #000;
   text-align: right;
   text-decoration: none;
-  color: #000;
 }
 .view2 .work-container .work img {
   width: 300px;
@@ -187,7 +189,6 @@ body {
 .view2 .work-container .work p {
   margin-top: -20px;
   font-size: 30px;
-  font-weight: 600;
 }
 .view2 .work-container .work p span {
   position: relative;
@@ -197,27 +198,27 @@ body {
   content: "";
   display: inline-block;
   position: absolute;
-  transform: translateX(-95%);
-  background-color: #F55149;
   width: 200px;
   height: 30px;
+  background-color: #F55149;
+  transform: translateX(-95%);
 }
 
 .view3 {
   background-color: #aaa;
 }
 .view3 .view-content {
-  margin: 5vw;
   display: flex;
+  margin: 5vw;
   justify-content: space-between;
 }
 .view3 .view-content .info-container {
   flex-direction: column;
 }
 .view3 .view-content .info-container p {
+  margin-bottom: 5px;
   padding: 5px 0px;
   width: fit-content;
-  margin-bottom: 5px;
 }
 .view3 .view-content .info-container p.copy, .view3 .view-content .info-container p br {
   -webkit-user-select: all;
@@ -233,13 +234,13 @@ body {
   width: 350px;
 }
 .view3 .view-content .form-container form {
-  background-color: #fff;
   padding: 5px 2% 15px 2%;
+  width: 100%;
+  text-align: right;
+  background-color: #fff;
   border: 2px solid black;
   box-shadow: -5px 5px 0 #777;
   transition: all 0.1s linear;
-  text-align: right;
-  width: 100%;
 }
 .view3 .view-content .form-container form:hover {
   box-shadow: 0px 0px 0 #777;
@@ -251,27 +252,27 @@ body {
   font-weight: 600;
 }
 .view3 .view-content .form-container form hr.divider {
+  margin: 5px -2% 15px -2%;
   border: 0;
   border-top: 2px solid black;
-  margin: 5px -2% 15px -2%;
 }
 .view3 .view-content .form-container form .text, .view3 .view-content .form-container form textarea {
-  font-family: inherit;
+  display: block;
   margin: 10px 0px;
   padding: 10px 8px;
-  border: 2px solid #555;
-  background-color: #ccc;
-  display: block;
   width: 100%;
+  font-family: inherit;
   font-size: 18px;
+  background-color: #ccc;
+  border: 2px solid #555;
 }
 .view3 .view-content .form-container form .text::placeholder, .view3 .view-content .form-container form textarea::placeholder {
   font-size: 16px;
 }
 .view3 .view-content .form-container form #send {
-  font-family: inherit;
-  background-color: #ccc;
   padding: 5px;
+  background-color: #ccc;
+  font-family: inherit;
   font-size: 15px;
   border: 2px solid black;
 }

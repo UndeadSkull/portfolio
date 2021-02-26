@@ -15,43 +15,43 @@
     background-color: $primary
     #bb
         position: absolute
+        padding: 0px 35px
         font-size: 150px
         color: $accent
         background-color: $secondary
-        padding: 0px 35px
-        box-shadow: -5px 5px 0 $accent
         top: 50%
         left: 50%
+        box-shadow: -5px 5px 0 $accent
         transform: translate(-50%,-50%)
         transition: all linear 0.1s
         #were
+            margin-bottom: -30px
+            width: 0
+            text-align: center
             font-size: 30px
             font-weight: 600
-            line-height: 30px
-            margin-bottom: -30px
-            transition: all 0.5s ease 
             font-variant-caps: unicase
-            text-align: center
-            width: 0
+            line-height: 30px
+            transition: all 0.5s ease
         .container
             position: absolute
             top: 50%
             left: 50%
             .names
-                opacity: 0
                 position: absolute
-                transform: translate(-50%,-50%)
+                opacity: 0
                 font-size: 40px
                 color: $primary
                 background: $accent
-                transition: all 0.5s ease 
+                transform: translate(-50%,-50%)
+                transition: all 0.5s ease
         &:hover
-            transform: translate(-50%,-50%) translate(-5px,5px)
             box-shadow: 0px 0px 0 $accent
+            transform: translate(-50%,-50%) translate(-5px,5px)
             #were
-                width: 100%
                 margin-top: -150px
                 margin-bottom: 120px
+                width: 100%
                 color: $primary
                 background: $accent
             .names
@@ -81,34 +81,35 @@
         display: flex
         justify-content: space-around
         .tab-heading
+            color: $secondary
+            background: $accent
+            font: inherit
+            font-size: 28px
+            font-weight: 600
+            text-decoration: none
             border: none
             outline: none
             cursor: inherit
-            text-decoration: none
-            font-size: 28px
-            color: $secondary
-            background: $accent
             &.active
                 color: #000
     .work-container
+        display: flex
+        position: absolute
         margin: 4%
         opacity: 1
-        display: flex
         width: 90%
         // height: 88%
-        position: absolute
         transition: opacity 0.3s ease
         .work
             margin: 1%
+            color: #000
             text-align: right
             text-decoration: none
-            color: #000
             img
                 width: 300px
             p
                 margin-top: -20px
                 font-size: 30px
-                font-weight: 600
                 span
                     position: relative
                     z-index: 1
@@ -116,23 +117,23 @@
                     content: ""
                     display: inline-block
                     position: absolute
-                    transform: translateX(-95%)
-                    background-color: $accent
                     width: 200px
                     height: 30px
+                    background-color: $accent
+                    transform: translateX(-95%)
 .view3
     @extend %view
     background-color: #aaa
     .view-content
-        margin: 5vw
         display: flex
+        margin: 5vw
         justify-content: space-between
         .info-container
             flex-direction: column
             p
+                margin-bottom: 5px
                 padding: 5px 0px
                 width: fit-content
-                margin-bottom: 5px
                 &.copy, br
                     -webkit-user-select: all
                     -moz-user-select: all
@@ -144,13 +145,13 @@
         .form-container
             width: 350px
             form
-                background-color: #fff
                 padding: 5px 2% 15px 2%
+                width: 100%
+                text-align: right
+                background-color: #fff
                 border: 2px solid black
                 box-shadow: -5px 5px 0 #777
                 transition: all 0.1s linear
-                text-align: right
-                width: 100%
                 &:hover
                     box-shadow: 0px 0px 0 #777
                     transform: translate(-5px,5px)
@@ -159,23 +160,23 @@
                     font-size: 28px
                     font-weight: 600
                 hr.divider
+                    margin: 5px -2% 15px -2%
                     border: 0
                     border-top: 2px solid black
-                    margin: 5px -2% 15px -2%
                 .text,textarea
-                    font-family: inherit
+                    display: block
                     margin: 10px 0px
                     padding: 10px 8px
-                    border: 2px solid #555
-                    background-color: #ccc
-                    display: block
                     width: 100%
+                    font-family: inherit
                     font-size: 18px
+                    background-color: #ccc
+                    border: 2px solid #555
                     &::placeholder
                         font-size: 16px
                 #send
-                    font-family: inherit
-                    background-color: #ccc
                     padding: 5px
+                    background-color: #ccc
+                    font-family: inherit
                     font-size: 15px
                     border: 2px solid black
